@@ -13,15 +13,19 @@ public class App {
         output("Fläche Dreieck: " + triangle.area());
         output("Fläche Kreis: " + circle.area());
 
-
-
-       
+        output("------  Differenzen ------");
+        output("Diff. r-t: " + areaDiff(rectangle, triangle));
+        output("Diff. r-c: " + areaDiff(rectangle, circle ));
+    }
+    
+    // 1. Variante ggf. 1000x überladen........... 
+    private static double areaDiff(Rectangle r, Triangle t) {
+        return r.area() - t.area();
     }
 
-  
-
-   
-
+    private static double areaDiff(Rectangle r, Circle c) {
+        return r.area() - c.area();
+    }
 
     private static void output(String outputStr) {
         System.out.println(outputStr);
